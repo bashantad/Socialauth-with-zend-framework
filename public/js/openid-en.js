@@ -14,26 +14,21 @@ var providers_large = {
         name : 'Yahoo',
         url : 'http://me.yahoo.com/'
     },
-    aol : {
-        name : 'AOL',
-        label : 'Enter your AOL screenname.',
-        url : 'http://openid.aol.com/{username}'
-    },
-    myopenid : {
-        name : 'MyOpenID',
-        label : 'Enter your MyOpenID username.',
-        url : 'http://{username}.myopenid.com/'
-    },
-    openid : {
-        name : 'OpenID',
-        label : 'Enter your OpenID.',
-        url : null
-    },
-//    houseshare : {
-//        name : 'HouseShare',
-//        label : 'Login using our webiste.',
-//        url: "javascript:houseshare_click();"
-//    }
+    //    myopenid : {
+    //        name : 'MyOpenID',
+    //        label : 'Enter your MyOpenID username.',
+    //        url : 'http://{username}.myopenid.com/'
+    //    },
+    //    openid : {
+    //        name : 'OpenID',
+    //        label : 'Enter your OpenID.',
+    //        url : null
+    //    },
+    //    houseshare : {
+    //        name : 'HouseShare',
+    //        label : 'Login using our webiste.',
+    //        url: "javascript:houseshare_click();"
+    //    },
     facebook : {
         name: 'Facebook',
         url: "https://www.facebook.com"
@@ -41,6 +36,11 @@ var providers_large = {
     twitter : {
         name: 'Twitter',
         url: "https://www.twitter.com"
+    },
+    aol : {
+        name : 'AOL',
+        label : 'Enter your AOL screenname.',
+        url : 'http://openid.aol.com/{username}'
     }
 };
 
@@ -53,22 +53,22 @@ function houseshare_click() {
 //   }
 
 var providers_small = {
-   /* livejournal : {
+/* livejournal : {
         name : 'LiveJournal',
         label : 'Enter your Livejournal username.',
         url : 'http://{username}.livejournal.com/'
     }, */
-    /* flickr: {
+/* flickr: {
 		name: 'Flickr',        
 		label: 'Enter your Flickr username.',
 		url: 'http://flickr.com/{username}/'
 	}, */
-    /* technorati: {
+/* technorati: {
 		name: 'Technorati',
 		label: 'Enter your Technorati username.',
 		url: 'http://technorati.com/people/technorati/{username}/'
 	}, */
- /*   wordpress : {
+/*   wordpress : {
         name : 'Wordpress',
         label : 'Enter your Wordpress.com username.',
         url : 'http://{username}.wordpress.com/'
@@ -83,17 +83,17 @@ var providers_small = {
         label : 'Your Verisign username',
         url : 'http://{username}.pip.verisignlabs.com/'
     }, */
-    /* vidoop: {
+/* vidoop: {
 		name: 'Vidoop',
 		label: 'Your Vidoop username',
 		url: 'http://{username}.myvidoop.com/'
 	}, */
-    /* launchpad: {
+/* launchpad: {
 		name: 'Launchpad',
 		label: 'Your Launchpad username',
 		url: 'https://launchpad.net/~{username}'
 	}, */
-  /*  claimid : {
+/*  claimid : {
         name : 'ClaimID',
         label : 'Your ClaimID username',
         url : 'http://claimid.com/{username}'

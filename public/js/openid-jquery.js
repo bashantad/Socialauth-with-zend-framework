@@ -44,6 +44,7 @@ openid = {
 		// add box for each provider
 		for (id in providers_large) {
 			box = this.getBoxHTML(id, providers_large[id], (this.all_small ? 'small' : 'large'), i++);
+            console.log(box);
 			openid_btns.append(box);
 		}
 		if (providers_small) {
@@ -64,14 +65,21 @@ openid = {
 	 * @return {String}
 	 */
 	getBoxHTML : function(box_id, provider, box_size, index) {
-		if (this.no_sprite) {
+		console.log(box_id);
+//        console.log(provider);
+//        console.log(provider);
+//        console.log(box_size);
+//        console.log(index);
+        if (this.no_sprite) {
+            
 			var image_ext = box_size == 'small' ? '.ico.gif' : '.gif';
-			return '<a title="' + this.image_title.replace('{provider}', provider["name"]) + '" href="javascript:openid.signin(\'' + box_id + '\');"'
+            return '<a title="' + this.image_title.replace('{provider}', provider["name"]) + '" href="javascript:openid.signin(\'' + box_id + '\');"'
 					+ ' style="background: #FFF url(' + this.img_path + '../images.' + box_size + '/' + box_id + image_ext + ') no-repeat center center" '
 					+ 'class="' + box_id + ' openid_' + box_size + '_btn"></a>';
 		}
 		var x = box_size == 'small' ? -index * 24 : -index * 100;
 		var y = box_size == 'small' ? -60 : 0;
+        
 		return '<a title="' + this.image_title.replace('{provider}', provider["name"]) + '" href="javascript:openid.signin(\'' + box_id + '\');"'
 				+ ' style="background: #FFF url(' + this.img_path + 'openid-providers-' + this.sprite + '.png); background-position: ' + x + 'px ' + y + 'px" '
 				+ 'class="' + box_id + ' openid_' + box_size + '_btn"></a>';

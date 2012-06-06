@@ -1,28 +1,15 @@
-README
-======
-
-This is an example Zend Framework 1.11.3 application that uses OpenID (Google,
-Yahoo, MyOpenId, AOL, OpenId) as well as Facebook Connect and Twitter Oauth for
+INTEGRATING GOOGLE, YAHOO, TWITTER AND FACEBOOK
+===============================================
+This is an example Zend Framework 1.11.3 application that uses Google, Yahoo, Facebook, Twitter for 
 authentication of users.
-
-To make it all work the following elements were used:
- - openid-selector
- - My_Auth_Adapter_Facebook by Michael Krotscheck
- - My_Auth_Adapter_Oauth and My_Auth_Adapter_Oauth_Twitter by Jason Austin
- - My_OpenId_Extension_AttributeExchange by Chris Bisnett
- - Patched Zend_OpenId_Consumer (http://framework.zend.com/issues/browse/ZF-6905)
-
-In some cases some slight modifications were made to the above elements.
-
 
 INSTALATION
 ===========
-
 The application contains everything that it needs to run, including full
 Zend Framework 1.11.3 (with patched  Zend_OpenId_Consumer). The exceptions are Facebook and Twitter app keys that need to
 be included in appkeys.ini. Normally, Facebook and Twitter require every application that uses their API to be 
 registered with them. Once an application is registered,  a user gets app id and a secret key. When you have those keys 
-you need to make an appkeys.ini file ( appkeys_example.ini example provided) with your own keys.
+you need to make an appkeys.ini file 
 
 Zend_Auth_Adapter_OpenId uses file based storage. For this reason, the application
 must be able to create, write and read APPLICATION_PATH . '/../tmp' folder.
@@ -30,8 +17,43 @@ must be able to create, write and read APPLICATION_PATH . '/../tmp' folder.
 It was reported that extension=php_openssl.dll should also be enabled in php.ini.
 
 
+CREATE AN APPLICATION AT FACEBOOK
+=================================
+Visit https://developers.facebook.com/apps and Click Create new app
+canvas url is the link of your website that you want to redirect after you are authenticated from facebook.
+Note:
+This canvas url will be used later to configure appkeys.ini file of your website(after you will complete your installation to your application)
+
+
+CREATE AN APPLICATION AT Twitter
+=================================
+
+Visit https://dev.twitter.com/apps/new
+Callback url is the link of your website that you want to redirect after you are authenticated from twitter
+Note: Callback url can't be http://localhost/ or http://localhost:80. It should be weblink that is already online
+(for test you can even use http://www.google.com/ or any other website.
+
+
+CONFIGURE appkeys.ini file
+(location at  Socialauth-with-zend-framework/application/configs/appkeys.ini file at your application)
+==========================
+facebook.redirecturi = [Canvas URL] 
+facebook.appid = [App ID/API Key]
+facebook.secret = [App Secret]
+Note: Canvas URL, APpp ID/API Key and App Secret are taken from your facebook application
+
+twitter.appid = [Consumer key]
+twitter.secret = [Consumer secret]
+twitter.redirecturi = Callback URL
+Note: Consumer key, Consumer secret and Callback URL are taken from your twitter application
+
 DEMO
 ====
-http://born2die.linuxpl.info/mwol/zfopenid/public/
+demo url is not uploaded yet
+
+
+REFERENCE
+=========
+https://github.com/marcinwol/zfopenid
 
 
