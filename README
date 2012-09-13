@@ -3,7 +3,7 @@ INTEGRATING GOOGLE, YAHOO, TWITTER AND FACEBOOK
 This is an example Zend Framework 1.11.3 application that uses Google, Yahoo, Facebook, Twitter for 
 authentication of users.
 
-INSTALATION
+INSTALLATION
 ===========
 The application contains everything that it needs to run, including full
 Zend Framework 1.11.3 (with patched  Zend_OpenId_Consumer). The exceptions are Facebook and Twitter app keys that need to
