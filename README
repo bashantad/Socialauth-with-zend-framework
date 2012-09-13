@@ -47,13 +47,9 @@ twitter.secret = [Consumer secret]
 twitter.redirecturi = Callback URL
 Note: Consumer key, Consumer secret and Callback URL are taken from your twitter application
 
-DEMO
-====
-demo url is not uploaded yet
+DEMO URL
+=======
+http://nepaladvisor.com/users/login
 
-
-REFERENCE
-=========
-https://github.com/marcinwol/zfopenid
 
 
